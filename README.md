@@ -22,7 +22,7 @@ npm run dev
 ```
 
 5. Default API base used in `src/services/productService.js` is:
-`http://localhost:9000/api/products`
+`http://localhost:3000/api/products`
 You can change it to your Symfony or Node.js API.
 
 If the API is not available, the app will fallback to using `localStorage` mock data.
