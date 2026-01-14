@@ -7,19 +7,23 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "start": "vite"
+    "start": "vite",
+    "dev-back": "sh -c 'vite --host 0.0.0.0 & echo $! > .vite.pid && echo Vite iniciado en background'",
+    "start-back": "sh -c 'vite & echo $! > .vite.pid && echo Vite iniciado en background'",
+    "stop": "sh -c 'kill $(cat .vite.pid) 2>/dev/null && rm .vite.pid && echo Vite detenido'"
   },
   "dependencies": {
     "axios": "^1.5.0",
+    "bcrypt": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3",
-    "postcss": "^8.4.27",
+    "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.14",
-    "vite": "^7.2.4",
-    "@vitejs/plugin-react": "^5.1.1"
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "vite": "^7.2.4"
   }
 }

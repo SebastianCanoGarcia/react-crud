@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../services/axios'
 
 const API = `${window.location.protocol}//${window.location.hostname}:3000/api/products`;
 
